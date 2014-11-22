@@ -6,7 +6,25 @@ A board layout that enables an easy process for tapping into the POWER, GROUND, 
 I give no guarantees of safety or function.  Use at your own risk.
 
 
-I've been thinking about ways to simplify installation onto a set of lights.   I am a little aprehensive about this part because of the possibility for someone to incorrectly attach the wires.  This connector design might also be helpful for replacing / removing bad bulbs.
+<h3>Feature Considerations</h3>
+The main goal is to be able to leave the original operation features in tact with the option of physicaly switching the signal over to the output from your own MCU.  
+
+I wanted to stick to a single sided, single layer design so people could more easily manufacture the board at home, but it may be a bit too complex for that.  If there is an option to sending the layout to an online board house and ordering 3 or 4 for a reasonable price, that works too.
+
+
+<h4>Basic 2 way switch</h4>
+Position 1 completely disconnects the additional MCU and routes the signal from the original controller to the signal line runing through the bulbs.  
+Position 2 completely disconnects the original signal from the original controller and replaces it with a the signal coming from a pin on the additional MCU.
+<h5>Possible Additional Features</h5>
+There may also be a case where someone wants to intercept the signal from the original controller and feed it into the additional MCU for further processing.  I'm not sure if this should be an aditional position on the mechanical switch or connected via a jumper.
+There may also be a case where someone wants to use a relay in place of the mechanical switch.  If it's possible to design the PCB in such a way that the switch option and relay option are available, then great. 
+
+
+<h3>Physicial Layout Considerations</h3>
+I've been thinking about ways to simplify installation onto a set of lights.   I am a little aprehensive about this part because of the possibility for someone to incorrectly attach the wires.  This connector design might also be helpful for replacing / removing bad bulbs. That process is a pain and currently requires cutting out the section containing the bad bulb and reconnecting the two bare ends.
+
+I configured this for the MSP430.  I'm not sure how popular the 20 pin style MCU socket is and how common it is to have the 3 connections required (ground, power, signal) located in the pin positions.  Thoughts and feedback here are much needed.
+
 
 Options include: 
 
