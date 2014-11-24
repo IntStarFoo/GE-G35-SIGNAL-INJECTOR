@@ -34,3 +34,14 @@ Options include:
 
 A suggestion was made to make the input and output screw terminal positions... _"pcb routing might be a little easier with the screw terminals side by side, especially if you're willing to reverse the wire order, which it seems you are."_
 <img src="http://i.imgur.com/sJBjPhM.jpg">
+
+Current Schematic (Last updated by svenstucki)<br/> 
+<img src="http://i.imgur.com/YQDnRil.png">
+Current Layout (Last updated by svenstucki)<br/>
+<img src="http://i.imgur.com/ONy1fNW.png">
+
+Notes / Questions on Current Layouts:<br/>
+
+1. I see additional lines coming off the MCU. Pin 16 and Pin 11. What is the purpose of these? Is this accounting for the idea of capturing the incoming original signal for processing? R1 and R3 - are these jumpers?
+
+2. The light set is designed to run with a 5v signal. The MSP430 runs on 3.3v. I see you have a 3.3v vreg. This is perfect as the lights function properly with a 3.3v signal. If a person wanted to run a 5v MCU, could they simply switch out the vreg and have things still function properly? (assuming the pins still line up)
